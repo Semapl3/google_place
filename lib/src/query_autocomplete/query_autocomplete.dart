@@ -31,12 +31,12 @@ class QueryAutocomplete {
   /// the selected language may be given a higher ranking. See the supported list of domain languages.
   /// If language is not supplied, the Places service will attempt to use the native language of the
   /// domain from which the request is sent.
-  Future<AutocompleteResponse> get(
+  Future<AutocompleteResponse?> get(
     String input, {
-    int offset,
-    LatLon location,
-    int radius,
-    String language,
+    int? offset,
+    LatLon? location,
+    int? radius,
+    String? language,
   }) async {
     assert(input != null);
     assert(input != "");
@@ -60,10 +60,10 @@ class QueryAutocomplete {
   Map<String, String> _createParameters(
     String apiKEY,
     String input,
-    int offset,
-    LatLon location,
-    int radius,
-    String language,
+    int? offset,
+    LatLon? location,
+    int? radius,
+    String? language,
   ) {
     String result = input.trimRight();
     result = result.trimLeft();

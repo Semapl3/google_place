@@ -26,7 +26,7 @@ class Photos {
   /// dimension, it will be scaled to match the smaller of the two dimensions, restricted to its
   /// original aspect ratio. Both the maxheight and maxwidth properties accept an integer
   /// between 1 and 1600.
-  Future<Uint8List> get(
+  Future<Uint8List?> get(
     String photoReference,
     int maxHeight,
     int maxWidth,
