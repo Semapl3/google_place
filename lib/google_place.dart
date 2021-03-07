@@ -65,7 +65,6 @@ class GooglePlace {
   static Duration timeout = Duration(milliseconds: 1500);
 
   GooglePlace(this.apiKEY) {
-    assert(apiKEY != null);
     this.search = Search(apiKEY);
     this.details = Details(apiKEY);
     this.photos = Photos(apiKEY);

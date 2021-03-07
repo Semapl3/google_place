@@ -50,16 +50,12 @@ class Circular {
   final int radius;
   final LatLon latLng;
 
-  Circular(this.radius, this.latLng)
-      : assert(radius != null),
-        assert(latLng != null);
+  Circular(this.radius, this.latLng);
 }
 
 class Rectangular {
   final LatLon southWest;
   final LatLon northEast;
 
-  Rectangular(this.southWest, this.northEast)
-      : assert(southWest != null),
-        assert(northEast != null);
+  Rectangular(this.southWest, this.northEast);
 }

@@ -44,10 +44,7 @@ class Search {
     String? fields,
     Locationbias? locationbias,
   }) async {
-    assert(input != null);
     assert(input != "");
-    assert(inputType != null);
-    assert(inputType != null);
     var queryParameters = _createFindPlaceParameters(
       apiKEY,
       input,
@@ -117,8 +114,6 @@ class Search {
     String? type,
     String? pagetoken,
   }) async {
-    assert(location != null);
-    assert(radius != null);
     var queryParameters = _createNearBySearchParameters(
       apiKEY,
       location,
@@ -200,7 +195,6 @@ class Search {
     String? type,
     String? pagetoken,
   }) async {
-    assert(query != null);
     assert(query != "");
     var queryParameters = _createTextSearchParameters(
       apiKEY,

@@ -72,7 +72,6 @@ class Autocomplete {
     List<Component>? components,
     bool strictbounds = false,
   }) async {
-    assert(input != null);
     assert(input != "");
     if (strictbounds) {
       assert(location != null);

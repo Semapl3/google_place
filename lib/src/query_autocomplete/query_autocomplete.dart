@@ -38,7 +38,6 @@ class QueryAutocomplete {
     int? radius,
     String? language,
   }) async {
-    assert(input != null);
     assert(input != "");
     var queryParameters = _createParameters(
       apiKEY,

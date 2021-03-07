@@ -40,7 +40,6 @@ class Details {
     String? sessionToken,
     String? fields,
   }) async {
-    assert(placeId != null);
     assert(placeId != "");
     var queryParameters = _createParameters(
       apiKEY,

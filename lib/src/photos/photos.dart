@@ -31,9 +31,7 @@ class Photos {
     int maxHeight,
     int maxWidth,
   ) async {
-    assert(photoReference != null);
     assert(photoReference != "");
-    assert(maxHeight != null || maxWidth != null);
     var queryParameters = _createParameters(
       apiKEY,
       photoReference,
@@ -60,18 +58,13 @@ class Photos {
       'photoreference': photoReference,
       'key': apiKEY,
     };
-    if (maxHeight != null) {
-      var item = {
-        'maxheight': maxHeight.toString(),
-      };
-      queryParameters.addAll(item);
-    }
-    if (maxWidth != null) {
-      var item = {
-        'maxwidth': maxWidth.toString(),
-      };
-      queryParameters.addAll(item);
-    }
+    queryParameters.addAll({
+      'maxheight': maxHeight.toString(),
+    });
+
+    queryParameters.addAll({
+      'maxwidth': maxWidth.toString(),
+    });
     return queryParameters;
   }
 }
